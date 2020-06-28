@@ -9,5 +9,6 @@
 ## 使用方法
  - 直接编译
  - sqlite数据库需要放置到编译文件夹根目录
- - add按钮新增一个空行，工作的完成情况是一个勾选框，文字输入框随意输入任务的说明，remove按钮将任务从列表中移除
- - 所有操作会立即同步到数据库
+ - add按钮新增一个任务,remove按钮将任务从列表中移除![image](sample/add&remove.gif)
+ - 修改任务说明直接编辑即可，所有操作会立即同步到数据库![image](sample/changeContent.gif)
+ - 任务完成状态通过复选框变更![image](sample/done&undone.gif)
