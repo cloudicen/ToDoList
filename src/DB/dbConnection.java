@@ -4,8 +4,8 @@ import java.sql.Connection;
 
 public interface dbConnection {
 
-    public Connection getConnection();
+    public Connection getConnection() throws Exception;
 
-    public void close();
+    public void close() throws Exception;
 
 }

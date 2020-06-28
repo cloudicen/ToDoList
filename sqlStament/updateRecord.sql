@@ -1,0 +1,1 @@
+UPDATE taskList SET isFinished= ? , taskInfo= ? WHERE taskNo= ?

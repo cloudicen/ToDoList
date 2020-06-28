@@ -1,0 +1,1 @@
+DELETE FROM taskList WHERE taskNo = ?

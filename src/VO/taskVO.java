@@ -5,9 +5,12 @@ public class taskVO {
     private String taskInfo;
     private boolean isFinished;
 
+    //Todo ：实现 getters & setters
+
     public void setTaskNo(int taskNo) {
         this.taskNo = taskNo;
     }
+
     public int getTaskNo() {
         return taskNo;
     }
@@ -15,6 +18,7 @@ public class taskVO {
     public void setTaskInfo(String taskInfo) {
         this.taskInfo = taskInfo;
     }
+
     public String getTaskInfo() {
         return taskInfo;
     }
@@ -22,8 +26,8 @@ public class taskVO {
     public void setIsFinished(boolean isFinished) {
         this.isFinished = isFinished;
     }
+
     public boolean getIsFinished() {
         return isFinished;
     }
-    //Todo ：实现 getters & setters
 }
