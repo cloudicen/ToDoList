@@ -16,7 +16,6 @@ public class todoList extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        //Todo：加载相关资源，初始化app
         try {
             Parent root = FXMLLoader.load(getClass().getResource("todoList.fxml"));
             Scene scene = new Scene(root, 300, 275);

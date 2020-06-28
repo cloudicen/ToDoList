@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class taskDAOImpl implements taskDAO {
-    //todo：实现DAO操作
     private Connection conn;
     private PreparedStatement sqlStatement;
 

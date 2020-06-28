@@ -7,8 +7,6 @@ import java.sql.Statement;
 
 public class sqLiteConnection implements dbConnection {
 
-    //todo：实现数据库连接
-
     //数据库连接驱动
     private static final String dbDRIVER = "org.sqlite.JDBC";
     //数据库文件名

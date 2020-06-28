@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class taskDAOProxy implements taskDAO{
-    //todo：实现代理实现方法
     private sqLiteConnection conn = null;
     private taskDAO dao;
 

@@ -31,7 +31,11 @@ public class todoListControl {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        //绑定对象
         taskList.setItems(listItems);
+
+        //自定义单元格的响应
         taskList.setCellFactory(param -> new ListCell<taskVO>() {
 
             @Override
@@ -39,6 +43,7 @@ public class todoListControl {
                 super.updateItem(item, empty);
 
                 if (empty == false) {
+
                     HBox hbox = new HBox();
 
                     CheckBox state = new CheckBox();
@@ -70,6 +75,7 @@ public class todoListControl {
 
                     Label Done = new Label("Done!");
 
+
                     Button deleteBtn = new Button("Remove");
                     deleteBtn.addEventHandler(ActionEvent.ACTION,event -> {
                         taskVO task = getItem();
@@ -86,6 +92,7 @@ public class todoListControl {
                 }
                 else
                 {
+                    //将已经失效的单元格置空
                     this.setGraphic(null);
                 }
             }
@@ -101,5 +108,4 @@ public class todoListControl {
         }
         listItems.add(task);
     }
-    // Todo：ui界面的逻辑控制代码
 }

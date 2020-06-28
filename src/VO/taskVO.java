@@ -5,8 +5,6 @@ public class taskVO {
     private String taskInfo;
     private boolean isFinished;
 
-    //Todo ：实现 getters & setters
-
     public void setTaskNo(int taskNo) {
         this.taskNo = taskNo;
     }
