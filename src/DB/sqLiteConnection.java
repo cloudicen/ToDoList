@@ -1,9 +1,6 @@
 package DB;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 
 public class sqLiteConnection implements dbConnection {
 
@@ -20,6 +17,22 @@ public class sqLiteConnection implements dbConnection {
         try {
             Class.forName(dbDRIVER);
             this.conn = DriverManager.getConnection(dbURL);
+
+            //初始化表
+            PreparedStatement sql = conn.prepareStatement(
+                    "create table if not exists taskList\n" +
+                    "(\n" +
+                    "    taskNo INTEGER not null\n" +
+                    "        constraint taskList_pk\n" +
+                    "            primary key autoincrement,\n" +
+                    "    isFinished INTEGER default 0 not null,\n" +
+                    "    taskInfo TEXT\n" +
+                    ");\n" +
+                    "\n" +
+                    "create unique index if not exists taskList_taskID_uindex\n" +
+                    "    on taskList (taskNo);");
+            sql.execute();
+
         } catch (Exception e) {
             throw e;
         }
